@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Inicio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+body {
+    margin:0;
+    font-family: Segoe UI;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #eef2f7, #dbe4ef);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 20px;
+    position: relative;
+    color: #1e2a44;
+}
+
+/* LOGO DE FONDO */
+body::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url('https://i.imgur.com/n8C08l2.jpeg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 80%;
+    opacity: 0.05;
+    pointer-events: none;
+}
+
+/* CONTENIDO ENCIMA */
+body > * {
+    position: relative;
+    z-index: 1;
+}
+
+h1 {
+    position: absolute;
+    top: 40px;
+    font-family: "Amatic SC";
+    font-size: 52px;
+    letter-spacing: 2px;
+    text-decoration: underline;
+}
+
+/* GRID / DOCK */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 20px;
+    width: 100%;
+    max-width: 1000px;
+    margin-bottom: 60px;
+
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(4px);
+    padding: 20px;
+    border-radius: 20px;
+}
+
+/* CARDS */
+.card {
+    background: rgba(255,255,255,0.18);
+    backdrop-filter: blur(6px);
+    border-radius: 16px;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    color: #1e2a44;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid rgba(255,255,255,0.25);
+
+    box-shadow:
+        0 10px 20px rgba(0,0,0,0.15),
+        0 4px 8px rgba(0,0,0,0.1),
+        inset 0 1px 0 rgba(255,255,255,0.4);
+
+    transition: 0.25s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px) scale(1.03);
+
+    box-shadow:
+        0 20px 40px rgba(0,0,0,0.25),
+        0 10px 20px rgba(0,0,0,0.15),
+        inset 0 1px 0 rgba(255,255,255,0.5);
+}
+
+/* ICONOS */
+.icono {
+    width: 50px;
+    height: 50px;
+    background: rgba(255,255,255,0.25);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.icono img {
+    width: 70%;
+    height: 70%;
+    object-fit: contain;
+}
+</style>
+</head>
+
+<body>
+
+<h1>MIS ACCESOS</h1>
+
+<div class="grid">
+
+<a class="card" href="https://www.google.com">
+<div class="icono">
+<img src="https://www.google.com/s2/favicons?sz=64&domain=www.google.com">
+</div>
+Google
+</a>
+
+<a class="card" href="https://edimarket.planexware.net/?subdominio=ypf">
+<div class="icono">
+<img src="https://www.google.com/s2/favicons?sz=64&domain=www.potigian.com.ar/">
+</div>
+Potigian
+</a>
+
+<a class="card" href="https://www.micocacola-andina.com/WebComercialCliente/WebComercialCliente/Index.aspx">
+<div class="icono">
+<img src="https://www.google.com/s2/favicons?sz=64&domain=www.koandina.com">
+</div>
+Coca Cola
+</a>
+
+<a class="card" href="https://atc.axionlog.com/login.aspx">
+<div class="icono">
+<img src="https://www.google.com/s2/favicons?sz=64&domain=www.axionlog.com">
+</div>
+Axionlog
+</a>
+
+<a class="card" href="https://extranet-downstream.ypf.com/">
+<div class="icono">
+<img src="https://www.google.com/s2/favicons?sz=64&domain=www.ypf.com.ar">
+</div>
+Extranet YPF
+</a>
+
+<a class="card" href="https://portal-app.pedidosya.com/">
+<div class="icono">
+<img src="https://www.google.com/s2/favicons?sz=64&domain=www.pedidosya.com.ar">
+</div>
+Pedidos Ya
+</a>
+
+<a class="card" href="https://www.mercadopago.com.ar/">
+<div class="icono">
+<img src="https://www.google.com/s2/favicons?sz=64&domain=www.mercadopago.com.ar">
+</div>
+Mercado Pago
+</a>
+
+</div>
+
+</body>
+</html>
